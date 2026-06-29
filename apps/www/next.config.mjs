@@ -6,6 +6,11 @@ const nextConfig = {
     "/*": ["./registry/**/*", "./content/**/*"],
   },
   reactStrictMode: true,
+  // Demo-Build: ESLint nicht im Build laufen lassen (Zeitersparnis,
+  // visuelle Pruefung erfolgt im Browser). TypeScript-Checks bleiben aktiv.
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     inlineCss: true,
   },

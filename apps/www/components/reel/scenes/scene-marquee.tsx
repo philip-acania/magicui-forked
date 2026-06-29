@@ -29,11 +29,12 @@ function ReviewCard({
             style={{ borderColor: `${accent.solid}33` }}
         >
             <div className="flex items-center gap-2">
-                <img
-                    className="size-9 rounded-full"
-                    alt={review.name}
-                    src={`https://avatar.vercel.sh/${review.handle}`}
-                />
+                <div
+                    className="flex size-9 items-center justify-center rounded-full text-sm font-semibold text-white"
+                    style={{ backgroundColor: accent.solid }}
+                >
+                    {review.name[0]}
+                </div>
                 <div className="flex flex-col">
                     <figcaption className="text-sm font-medium text-white">
                         {review.name}
